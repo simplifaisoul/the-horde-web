@@ -5,15 +5,17 @@ import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 function App() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white">
-      {/* Background Animation */}
-      <LightningBackground hue={220} intensity={1} size={1} speed={1} />
+    <div className="relative w-full min-h-screen bg-black text-white selection:bg-horde-blue/50 selection:text-white">
+      {/* Background Animation - Fixed to viewport */}
+      <div className="fixed inset-0 z-0">
+        <LightningBackground hue={220} intensity={1} size={1} speed={1} />
+      </div>
 
-      {/* Content Overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-4">
+      {/* Content Overlay - Scrolls naturally */}
+      <div className="relative z-10 flex flex-col min-h-screen">
 
         {/* Navigation / Header */}
-        <nav className="absolute top-0 w-full p-6 flex justify-between items-center backdrop-blur-sm bg-black/20">
+        <nav className="sticky top-0 z-50 w-full p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/10">
           <div className="text-2xl font-bold tracking-tighter text-horde-blue shadow-neon">
             THE HORDE
           </div>
@@ -28,7 +30,7 @@ function App() {
         </nav>
 
         {/* Hero Content */}
-        <main className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8 animate-fade-in-up">
+        <main className="flex-grow flex flex-col items-center justify-center text-center max-w-4xl mx-auto space-y-8 animate-fade-in-up py-20 px-4">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
               DOMINATE YOUR FUTURE
