@@ -32,12 +32,12 @@ export default function Services() {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="group p-6 border border-gray-800 bg-gray-900/50 rounded-xl hover:border-horde-blue/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,240,255,0.2)]">
-                            <div className="mb-4 p-3 bg-black/40 rounded-lg w-fit group-hover:scale-110 transition-transform">
+                        <div key={index} className="group p-6 border border-horde-blue/20 bg-gray-900/60 backdrop-blur-sm rounded-xl hover:border-horde-blue transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,240,255,0.15)] hover:-translate-y-1">
+                            <div className="mb-4 p-3 bg-horde-blue/10 rounded-lg w-fit group-hover:scale-110 transition-transform">
                                 {service.icon}
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                            <p className="text-gray-400 text-sm">{service.description}</p>
+                            <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                         </div>
                     ))}
                 </div>
