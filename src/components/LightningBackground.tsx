@@ -55,7 +55,7 @@ const LightningBackground: React.FC<LightningProps> = ({
       uniform float uIntensity;
       uniform float uSize;
       
-      #define OCTAVE_COUNT 10
+      #define OCTAVE_COUNT 5
 
       // Convert HSV to RGB.
       vec3 hsv2rgb(vec3 c) {

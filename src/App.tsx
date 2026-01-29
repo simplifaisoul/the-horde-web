@@ -8,7 +8,7 @@ function App() {
     <div className="relative w-full min-h-screen bg-black text-white selection:bg-horde-blue/50 selection:text-white overflow-x-hidden">
       {/* Background Animation - Fixed to viewport */}
       <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black opacity-80"></div>
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <LightningBackground hue={220} intensity={1} size={1} speed={1} />
       </div>
 

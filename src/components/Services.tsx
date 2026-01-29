@@ -37,7 +37,7 @@ export default function Services() {
                                 {service.icon}
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                            <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
+                            <p className="text-gray-100 text-sm leading-relaxed opacity-90">{service.description}</p>
                         </div>
                     ))}
                 </div>
