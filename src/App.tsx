@@ -39,9 +39,10 @@ function App() {
               YOUR FUTURE
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-            State of the art immigration services for Waterloo Students.
-            Join The Horde and secure your place in Canada.
+          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl font-medium">
+            <span className="text-horde-blue font-bold">ABIC Immigration</span> re-imagined for the ambitious.
+            <br />
+            Secure your study permit, PGWP, and Permanent Residency with the power of The Horde.
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mt-8">
