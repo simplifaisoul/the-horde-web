@@ -5,36 +5,38 @@ import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 function App() {
   return (
-    <div className="relative w-full min-h-screen bg-black text-white selection:bg-horde-blue/50 selection:text-white overflow-x-hidden">
+    <div className="relative w-full min-h-screen bg-black text-white selection:bg-horde-blue/50 selection:text-white overflow-x-hidden font-['Rajdhani']">
+      <div className="bg-grain"></div>
+
       {/* Background Animation - Fixed to viewport */}
-      <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black opacity-80"></div>
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <LightningBackground hue={220} intensity={1} size={1} speed={1} />
+      <div className="fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900/50 via-black to-black opacity-80"></div>
+      <div className="fixed inset-0 z-0 pointer-events-none mix-blend-screen">
+        <LightningBackground hue={200} intensity={1.5} size={1.2} speed={0.8} />
       </div>
 
-      {/* Content Overlay - Scrolls naturally */}
+      {/* Content Overlay */}
       <div className="relative z-10 flex flex-col min-h-screen">
 
         {/* Navigation / Header */}
-        <nav className="sticky top-0 z-50 w-full p-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/10">
-          <div className="text-2xl font-bold tracking-tighter text-horde-blue shadow-neon">
+        <nav className="sticky top-0 z-50 w-full p-6 flex justify-between items-center backdrop-blur-xl bg-black/60 border-b border-white/5 supports-[backdrop-filter]:bg-black/30">
+          <div className="text-3xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 font-['Orbitron'] flex items-center gap-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
             THE HORDE
           </div>
-          <div className="flex gap-4">
-            <a href="https://www.facebook.com/abicrcic" target="_blank" rel="noopener noreferrer" className="hover:text-horde-blue transition-colors">
-              <Facebook />
+          <div className="flex gap-6">
+            <a href="https://www.facebook.com/abicrcic" target="_blank" rel="noopener noreferrer" className="hover:text-horde-blue transition-all hover:scale-125 hover:drop-shadow-[0_0_8px_#00f0ff]">
+              <Facebook size={24} />
             </a>
-            {/* Add more socials as placeholders if needed */}
-            <a href="#" className="hover:text-horde-blue transition-colors"><Instagram /></a>
-            <a href="#" className="hover:text-horde-blue transition-colors"><Twitter /></a>
+            <a href="#" className="hover:text-horde-blue transition-all hover:scale-125 hover:drop-shadow-[0_0_8px_#00f0ff]"><Instagram size={24} /></a>
+            <a href="#" className="hover:text-horde-blue transition-all hover:scale-125 hover:drop-shadow-[0_0_8px_#00f0ff]"><Twitter size={24} /></a>
           </div>
         </nav>
 
         {/* Hero Content */}
-        <main className="flex-grow flex flex-col items-center justify-center text-center max-w-4xl mx-auto space-y-8 animate-fade-in-up py-20 px-4">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
-              DOMINATE YOUR FUTURE
+        <main className="flex-grow flex flex-col items-center justify-center text-center max-w-6xl mx-auto space-y-12 animate-fade-in-up py-32 px-4">
+          <h1 className="text-6xl md:text-9xl font-black tracking-tighter font-['Orbitron'] leading-none">
+            <span className="block text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">DOMINATE</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-horde-blue via-cyan-400 to-white drop-shadow-[0_0_20px_rgba(0,240,255,0.6)]">
+              YOUR FUTURE
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
